@@ -213,7 +213,7 @@ The limits \eqref{eq:zlim} are as follows:
   & \theta_i = \theta_i^\text{ref}, && i \in \mathcal{I}_\text{ref} \label{eq:thetaslack} \\
   & v_m^{i} = v_m^{i,\text{ref}}, && i \in \mathcal{I}_\text{ref} \label{eq:vmslack} \\
   0 \leq & v_m^{i} \leq v_m^{i,\text{ref}}, && i \in \{1,\ldots,n_g\} \backslash \mathcal{I}_\text{ref} \label{eq:vmpv} \\
-  q_q^{i,\text{min}} \leq & q_g^i \leq q_g^{i,\text{max}}, && i \in \{1,\ldots,n_g\} \backslash \mathcal{I}_\text{ref} \label{eq:qgpv}\\
+  q_g^{i,\text{min}} \leq & q_g^i \leq q_g^{i,\text{max}}, && i \in \{1,\ldots,n_g\} \backslash \mathcal{I}_\text{ref} \label{eq:qgpv}\\
   & p_g^i = p_g^{i,0}, && i \in \{1,\ldots,n_g\} \backslash \mathcal{I}_\text{ref} \\
   & \alpha \in [0,+\infty].
 \end{align}
@@ -323,11 +323,9 @@ The functions in Table \ref{tab:functions} are used to set up and solving the ma
   Name  & Description \\
   \midrule
   \codemat{maxloadlim} & Main function for solving the maximum loadability limit problem.\\
-  \codemat{postproc\_maxloadlim} & Post-processing function that transforms the dispatchable loads back to normal loads.\\
-  \codemat{prepare\_maxloadlim} & Prepares the \matpower case before the AC OPF is run, see Section \ref{sec:adjust-matp-case}.\\
-  \codemat{print\_maxloadlim} & Pretty prints the results from the maximum loadability problem.\\
-  \codemat{userfcn\_direction\_mll\_ext2int} & Converts the vector of generator production changes to internal indexing.\\
+  \codemat{prepare\_maxll} & Prepares the \matpower{} case before the AC OPF is run, see Section \ref{sec:adjust-matp-case}.\\
   \codemat{userfcn\_direction\_mll\_formulation} & Callback function to define new variables, constraints and costs, see Section \ref{sec:defin-vari-alpha}. \\
+  \codemat{postproc\_maxloadlim} & Post-processing function that transforms the dispatchable loads back to normal loads.\\
   \bottomrule
   \end{tabular}
   \caption{Functions used for the maximum loadability limit problem}

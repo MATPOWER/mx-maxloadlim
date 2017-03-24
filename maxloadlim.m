@@ -59,7 +59,7 @@ mpopt = mpoption(mpopt,'out.all',0);
 % Decreasing the threshold for the relative complementarity constraints
 mpopt = mpoption(mpopt,'mips.comptol',1e-8);
 % Change solver
-mpopt = mpoption(mpopt,'opf.ac.solver','MIPS');
+mpopt = mpoption(mpopt, 'opf.ac.solver', 'MIPS');
 % Execute opf
 results = runopf(mpc_vl,mpopt);
 
